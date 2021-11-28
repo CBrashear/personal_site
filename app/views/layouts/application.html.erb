@@ -13,10 +13,30 @@
   <header>
     <div class="nav_bar">
       <ul>
-        <li><%= link_to 'Home', root_path %></li>
-        <li><%= link_to 'About', about_path %></li>
-        <li><%= link_to 'Resume', resume_path %></li>
-        <li><%= link_to 'Projects', projects_path %></li>
+        <li>
+          <%= link_to root_path do %>
+            <%= image_tag "nav/home_icon.png", alt: "Home Icon", height: 45 %>
+            <p>Home</p>
+          <% end%>
+        </li>
+        <li>
+          <%= link_to about_path do %>
+            <%= image_tag "nav/about_icon.png", alt: "About Icon", height: 45 %>
+            <p>About</p>
+          <% end%>
+        </li>
+        <li>
+          <%= link_to resume_path do %>
+            <%= image_tag "nav/resume_icon.png", alt: "Resume Icon", height: 45 %>
+            <p>Resume</p>
+          <% end%>
+        </li>
+        <li>
+          <%= link_to projects_path do %>
+            <%= image_tag "nav/projects_icon.png", alt: "Projects Icon", height: 45 %>
+            <p>Projects</p>
+          <% end%>
+        </li>
       </ul>
     </div>
   </header>
