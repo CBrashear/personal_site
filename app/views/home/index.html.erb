@@ -1,5 +1,57 @@
-<h1>Welcome to my site</h1>
+<br>
 
 <main>
-  <%= render "filler_partial" %>
+  <div class="page-info mx-auto">
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome!</h1>
+      <p class="lead text-center">This is a personal site for me, Christopher Brashear. <br \>I'm serving this website where I can put my latest and greatest stuff.</p>
+      <hr class="my-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm text-center">
+            <button id="about_button" type="button" class="btn btn-outline-primary section_button">About</button>
+            <br><br>
+            <p>This is where I will talk about myself in general.</p>
+          </div>
+          <div class="col-sm text-center">
+            <button id="resume_button" type="button" class="btn btn-outline-primary section_button">Resume</button>
+            <br><br>
+            <p>This is where I will include my resume and download link.</p>
+          </div>
+          <div class="col-sm text-center">
+            <button id="projects_button" type="button" class="btn btn-outline-primary section_button">Projects</button>
+            <br><br>
+            <p>This is where I will include my projects</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div hidden id="about_content_body" class="page-info mx-auto section_content_body">
+    <%= render "about" %>
+  </div>
+
+  <div hidden id="resume_content_body" class="page-info mx-auto section_content_body">
+    <%= render "resume" %>
+    <div id="download_button_container" class="container">
+      <div class="row">
+        <div class="col text-center">
+          <%= link_to download_path, alt: "Resume PDF Download", target: "_blank", class: "btn btn-primary", id: "download_button", format: 'pdf' do %>
+            <i class="fa fa-download"> Resume Download</i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div hidden id="projects_content_body" class="page-info mx-auto section_content_body">
+    <%= render "projects" %>
+  </div>
 </main>
+
+<!-- Load local javascript -->
+<%= javascript_pack_tag 'nav_transition.js', 'data-turbolinks-track': 'reload' %>
+
+<!-- Font awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

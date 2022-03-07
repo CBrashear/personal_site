@@ -2,33 +2,71 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+$jumbotron_color: #e9ecef;
+
 body {
-  margin: 0;
+  background-color: rgb(183, 204, 223);
 }
 
-.nav_bar {
-  position: relative;
-  overflow: hidden;
-  background-color: #333;
+h1 {
+  text-align: center;
+}
 
-  ul {
-    list-style-type: none;
-    margin: 0;
+// Index page
+.section_content_body {
+  background-color: $jumbotron_color;
+  padding: 2em;
+  margin-bottom: 2em;
+}
 
-    li {
-      float: left;
+.section_button {
+  margin-top: 15px;
+}
+
+.page-info {
+  width: 75%;
+}
+
+/*  Resume
+*   * Top resume section
+*   * Bottom resume section
+*/
+
+#download_button_container {
+  margin-top: 1em;
+}
+
+.outline {
+  border-style: solid;
+}
+
+//   * Top resume section
+#top_resume_section {
+  background-color: #00b4d8;
+  border-bottom-style: solid;
+  border-width: large;
+}
+
+#top_resume_section .col-8 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+//   * Bottom resume section
+#bottom_resume_section {
+  #personal_info, #skills {
+    ul {
+      padding-left: 0;
     }
 
-    li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-
-    li a:hover:not(.active) {
-      background-color: #111;
+    ul li {
+      list-style-type: none;
+      margin-bottom: 1em;
     }
   }
 }
+
+#bottom_resume_section .col-4 {
+    border-right-style: solid;
+} 
