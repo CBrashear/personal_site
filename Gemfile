@@ -11,13 +11,6 @@ gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 
-# Pdf download gems
-# gem 'jquery-rails'
-# gem 'bootstrap', '~> 4.1.3'
-gem 'pdfkit'
-# gem 'wicked_pdf'
-# gem 'wkhtmltopdf-binary'
-
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do

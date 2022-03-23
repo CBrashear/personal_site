@@ -33,13 +33,12 @@
   </div>
 
   <div hidden id="resume_content_body" class="page-info mx-auto section_content_body">
-    <%= render "resume" %>
-    <div id="download_button_container" class="container">
+    <div class="container">
       <div class="row">
         <div class="col text-center">
-          <%= link_to download_path, alt: "Resume PDF Download", target: "_blank", class: "btn btn-primary", id: "download_button", format: 'pdf' do %>
-            <i class="fa fa-download"> Resume Download</i>
-          <% end %>
+          <object data="<%= @resume_pdf_path %>" type="application/pdf" width="100%" height="1000px">
+            <div>No resume preview found</div>
+          </object>
         </div>
       </div>
     </div>
